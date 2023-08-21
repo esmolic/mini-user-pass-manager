@@ -1,0 +1,84 @@
+PREVOĐENJE
+javac UserManagement.java Data.java Login.java 
+
+DODAVANJE KORISNIKA
+java UserManagement add Ivica
+- upisati 123 kao zaporku kako bi se pojavila poruka o nedovoljnoj složenosti
+
+java UserManagement add Ivica
+- upisati različite zaporke kako bi došla obavijest o tome
+
+java UserManagement add Ivica
+- upisati Aqwert12 kao zaporku
+
+POKUŠAJ DODAVANJA POSTOJEĆEG KORISNIČKOG IMENA
+java UserManagement add Ivica
+- upisati proizvoljnu valjanu zaporku i primijetiti poruku o postojanju korisnika
+
+LOGIN
+java Login Ivica
+- upisati 123 kao zaporku kako bi se pojavila poruka o pogrešnom korisničkom imenu ili šifri
+
+java Login Ivica
+- upisati Aqwert12 kao zaporku (primijetite dulje vrijeme čekanja na upit o zaporki zbog prijašnjeg pogrešnog unosa)
+
+FORCEPASS
+java UserManagement forcepass Ivica
+
+java UserManagement forcepass Perica
+- obavijest o nemogućnosti pronalaska korisničkog imena
+
+LOGIN UZ FORCEPASS
+java Login Ivica
+- upisati 123 kao zaporku kako bi se pojavila poruka o nepodudaranju s trenutnom
+
+java Login Ivica
+- upisati Aqwert12 kao staru zaporku
+- upisati Aqwert12 kao zaporku kako bi se pojavila poruka o podudaranja s trenutnom
+
+java Login Ivica
+- upisati Aqwert12 kao staru zaporku
+- upisati 123 kao zaporku kako bi se pojavila poruka o nedovoljnoj složenosti
+
+java Login Ivica
+- upisati Aqwert12 kao staru zaporku
+- upisati asdf123A kao zaporku
+
+PROMJENA ZAPORKE U USER MANAGEMENTU
+java UserManagement passwd Ivica
+- upisati Aqwert12 kao zaporku
+
+java UserManagement passwd Perica
+- obavijest o nemogućnosti pronalaska korisničkog imena
+
+PROVJERA PROMJENE ZAPORKE
+java Login Ivica
+- upisati Aqwert12 kao zaporku
+
+BRISANJE KORISNIKA
+java UserManagement del Ivica
+
+java UserManagement del Perica
+- obavijest o nemogućnosti pronalaska korisničkog imena
+
+PROVJERA IZBRISANOG KORISNIKA
+java Login Ivica
+- unijeti bilo koju zaporku
+
+BLOKIRANJE RAČUNA
+java UserManagement add Ivica
+- unijeti proizvoljnu prihvatljivu zaporku
+- u datoteci db.txt promijeniti drugu znamenku u redu ispod korisničkog imena u 7
+
+java Login Ivica
+- primijetiti da je račun "blokiran" - izbrisan i administrator ga mora ponovno dodati i postaviti zaporku
+
+SIMULACIJA POSTOJANJA KORISNIKA
+java Login Perica
+- primijetiti da korisnik Perica nije dodan u bazu, no napadaču koji možda nije uspio doći do zapisa to ne želimo otkriti, pa se program ponaša kao da je unesena pogrešna zaporka za postojećeg korisnika
+
+java login Perica
+- primijetiti dulje vrijeme čekanja
+
+- namjestiti u datoteci ne.txt znamenku ispod korisničkog imena Perica na 7
+- primijetiti da se simulira "blokiranje" korisnika, tj. brisanje računa iz baze, iako se samo briše zapis iz datoteke s unesenim neispravnim korisničkim imenima
